@@ -148,6 +148,10 @@ mysql> select * from teacher;
 +----+--------+-----+-------+-----------+---------+---------------------+------+
 3 rows in set (0.00 sec)
 
+データベースをバックアップ
+C:\Users\kingjianghua>mysqldump --opt --user=jin --password phplesson > phplesson01.sql
+Enter password: ****
+
 
 
 
