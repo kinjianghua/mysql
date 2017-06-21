@@ -1,0 +1,5 @@
+
+I   increment
+P   Primaery key
+F   Foreign key  (此值必须是别的表中的主键)
+M   Manatoery
