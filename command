@@ -103,6 +103,24 @@ mysql> desc students;
 +---------+--------------+------+-----+---------+----------------+
 6 rows in set (0.00 sec)
 
+mysql> alter table students change ADDRESS LOCATION varchar(120);
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc students;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| ID       | int(11)      | NO   | PRI | NULL    | auto_increment |
+| NAME     | varchar(40)  | NO   |     | NULL    |                |
+| AGE      | int(11)      | NO   |     | NULL    |                |
+| SCORE    | double       | NO   |     | NULL    |                |
+| FAVORITE | varchar(40)  | YES  |     | NULL    |                |
+| LOCATION | varchar(120) | YES  |     | NULL    |                |
+| COMM     | varchar(120) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
 
 mysql> create table TEACHER
     -> (
