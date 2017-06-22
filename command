@@ -121,6 +121,24 @@ mysql> desc students;
 +----------+--------------+------+-----+---------+----------------+
 7 rows in set (0.00 sec)
 
+mysql> alter table students change STU_ID STU_ID int AUTO_INCREMENT;
+Query OK, 2 rows affected (0.08 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> desc students;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| STU_ID   | int(11)      | NO   | PRI | NULL    | auto_increment |
+| NAME     | varchar(40)  | NO   |     | NULL    |                |
+| AGE      | int(11)      | NO   |     | NULL    |                |
+| SCORE    | double       | NO   |     | NULL    |                |
+| FAVORITE | varchar(40)  | YES  |     | NULL    |                |
+| LOCATION | varchar(120) | YES  |     | NULL    |                |
+| COMM     | varchar(120) | YES  |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
 
 mysql> create table TEACHER
     -> (
